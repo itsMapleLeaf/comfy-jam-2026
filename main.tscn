@@ -1,0 +1,271 @@
+[gd_scene format=3 uid="uid://dbyy3jvymcsxw"]
+
+[ext_resource type="Script" uid="uid://6rkbmxexlmgf" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://d2yuw4bvysbkc" path="res://assets/cafe_interior_bg.jpg" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://csgeqc27daye2" path="res://assets/coffee_tools_03.png" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://djpqgrdxfeaeh" path="res://assets/hot_coffee_03.png" id="3_h2yge"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5w0j"]
+resource_local_to_scene = true
+atlas = ExtResource("2_0xm2m")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mycd"]
+resource_local_to_scene = true
+atlas = ExtResource("2_0xm2m")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2yge"]
+resource_local_to_scene = true
+atlas = ExtResource("2_0xm2m")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xm2m"]
+resource_local_to_scene = true
+atlas = ExtResource("2_0xm2m")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bvp3"]
+resource_local_to_scene = true
+atlas = ExtResource("2_0xm2m")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
+resource_local_to_scene = true
+atlas = ExtResource("3_h2yge")
+region = Rect2(80, 0, 16, 16)
+
+[node name="Main" type="Control" unique_id=1584530441]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1bvp3")
+metadata/_edit_lock_ = true
+
+[node name="CafeInteriorBg" type="TextureRect" parent="." unique_id=841141913]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ig7tw")
+expand_mode = 3
+
+[node name="Panel" type="Panel" parent="." unique_id=587829247]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BrewingScreen" type="Control" parent="." unique_id=1429627274]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="CoffeeTools03" type="TextureRect" parent="BrewingScreen" unique_id=896850697]
+texture_filter = 1
+layout_mode = 0
+offset_left = 767.0
+offset_top = 340.0
+offset_right = 783.0
+offset_bottom = 356.0
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_h5w0j")
+stretch_mode = 5
+
+[node name="CoffeeTools09" type="TextureRect" parent="BrewingScreen" unique_id=1430932379]
+texture_filter = 1
+layout_mode = 0
+offset_left = 544.0
+offset_top = 204.0
+offset_right = 560.0
+offset_bottom = 236.0
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_7mycd")
+stretch_mode = 5
+
+[node name="CoffeeTools07" type="TextureRect" parent="BrewingScreen" unique_id=335606128]
+texture_filter = 1
+layout_mode = 0
+offset_left = 887.0
+offset_top = 343.0
+offset_right = 903.0
+offset_bottom = 359.0
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_h5w0j")
+stretch_mode = 5
+
+[node name="CoffeeTools08" type="TextureRect" parent="BrewingScreen" unique_id=1738568104]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1004.0
+offset_top = 343.0
+offset_right = 1020.0
+offset_bottom = 359.0
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_h5w0j")
+stretch_mode = 5
+
+[node name="CoffeeTools04" type="TextureRect" parent="BrewingScreen" unique_id=471841137]
+texture_filter = 1
+layout_mode = 0
+offset_left = 747.0
+offset_top = 144.0
+offset_right = 763.0
+offset_bottom = 160.0
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_h2yge")
+stretch_mode = 5
+
+[node name="CoffeeTools05" type="TextureRect" parent="BrewingScreen" unique_id=1303249337]
+texture_filter = 1
+layout_mode = 0
+offset_left = 868.0
+offset_top = 148.0
+offset_right = 884.0
+offset_bottom = 164.0
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_0xm2m")
+stretch_mode = 5
+
+[node name="CoffeeTools06" type="TextureRect" parent="BrewingScreen" unique_id=1489298620]
+texture_filter = 1
+layout_mode = 0
+offset_left = 979.0
+offset_top = 151.0
+offset_right = 995.0
+offset_bottom = 167.0
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_1bvp3")
+stretch_mode = 5
+
+[node name="CoffeeTools10" type="TextureRect" parent="BrewingScreen" unique_id=2140608258]
+texture_filter = 1
+layout_mode = 0
+offset_left = 74.0
+offset_top = 219.0
+offset_right = 90.0
+offset_bottom = 235.0
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_lquwl")
+stretch_mode = 5
+
+[node name="CoffeeTools11" type="TextureRect" parent="BrewingScreen" unique_id=862110585]
+texture_filter = 1
+layout_mode = 0
+offset_left = 201.0
+offset_top = 218.0
+offset_right = 217.0
+offset_bottom = 234.0
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_lquwl")
+stretch_mode = 5
+
+[node name="CoffeeTools13" type="TextureRect" parent="BrewingScreen" unique_id=1949307673]
+texture_filter = 1
+layout_mode = 0
+offset_left = 323.0
+offset_top = 226.0
+offset_right = 339.0
+offset_bottom = 242.0
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_lquwl")
+stretch_mode = 5
+
+[node name="CoffeeTools14" type="TextureRect" parent="BrewingScreen" unique_id=443811667]
+texture_filter = 1
+layout_mode = 0
+offset_left = 200.0
+offset_top = 345.0
+offset_right = 216.0
+offset_bottom = 361.0
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_lquwl")
+stretch_mode = 5
+
+[node name="CoffeeTools12" type="TextureRect" parent="BrewingScreen" unique_id=1442107478]
+texture_filter = 1
+layout_mode = 0
+offset_left = 71.0
+offset_top = 338.0
+offset_right = 87.0
+offset_bottom = 354.0
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_lquwl")
+stretch_mode = 5
+
+[node name="CoffeeTools15" type="TextureRect" parent="BrewingScreen" unique_id=579713513]
+texture_filter = 1
+layout_mode = 0
+offset_left = 333.0
+offset_top = 338.0
+offset_right = 349.0
+offset_bottom = 354.0
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_lquwl")
+stretch_mode = 5
+
+[node name="ServingScreen" type="Control" parent="." unique_id=1951145757]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1274992540]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 173.0
+offset_right = 296.0
+offset_bottom = 207.0
+theme_override_font_sizes/font_size = 24
+text = "Coffee Cups"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1804258890]
+layout_mode = 0
+offset_left = 852.0
+offset_top = 98.0
+offset_right = 990.0
+offset_bottom = 132.0
+theme_override_font_sizes/font_size = 24
+text = "Grounds"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=399190489]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 203.0
+offset_right = 657.0
+offset_bottom = 237.0
+theme_override_font_sizes/font_size = 24
+text = "Water"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=1713456627]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 473.0
+offset_right = 1015.0
+offset_bottom = 507.0
+theme_override_font_sizes/font_size = 24
+text = "Coffee Makers"
+horizontal_alignment = 1
+vertical_alignment = 1
