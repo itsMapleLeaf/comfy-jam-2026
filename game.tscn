@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://bal34fb5kkrdy"]
+
+[ext_resource type="Script" uid="uid://nwcifr13xnrr" path="res://game.gd" id="1_80nbo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80nbo"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Game" type="Node" unique_id=1661236262]
+script = ExtResource("1_80nbo")
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=730777997]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 420.0
+offset_bottom = 201.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+vertical = true
+
+[node name="PanelContainer" type="PanelContainer" parent="BoxContainer" unique_id=1294076730]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_80nbo")
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/PanelContainer" unique_id=11449579]
+layout_mode = 2
+vertical = true
+
+[node name="Heading" type="Label" parent="BoxContainer/PanelContainer/BoxContainer" unique_id=1760432837]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Inventory"
+
+[node name="Inventory" type="Label" parent="BoxContainer/PanelContainer/BoxContainer" unique_id=1368543320]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Inventory"
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer" unique_id=1934778719]
+layout_mode = 2
+vertical = true
+
+[node name="PanelContainer" type="PanelContainer" parent="BoxContainer/BoxContainer" unique_id=887650604]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_80nbo")
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/BoxContainer/PanelContainer" unique_id=689239252]
+layout_mode = 2
+vertical = true
+
+[node name="Heading" type="Label" parent="BoxContainer/BoxContainer/PanelContainer/BoxContainer" unique_id=127572392]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Coffee Maker"
+
+[node name="CoffeeMachineState" type="Label" parent="BoxContainer/BoxContainer/PanelContainer/BoxContainer" unique_id=1835845679]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CoffeeMachineState"
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/BoxContainer" unique_id=1287020466]
+layout_mode = 2
+
+[node name="AddGroundsButton" type="Button" parent="BoxContainer/BoxContainer/BoxContainer" unique_id=96285250]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add Grounds"
+
+[node name="AddWaterButton" type="Button" parent="BoxContainer/BoxContainer/BoxContainer" unique_id=561913781]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add Water"
+
+[node name="PlaceMugButton" type="Button" parent="BoxContainer/BoxContainer/BoxContainer" unique_id=1368392070]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Place Mug"
+
+[node name="MakeCoffeeButton" type="Button" parent="BoxContainer/BoxContainer/BoxContainer" unique_id=750632077]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Make Coffee"
+
+[connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/AddGroundsButton" to="." method="_on_add_grounds_button_pressed"]
+[connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/AddWaterButton" to="." method="_on_add_water_button_pressed"]
+[connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/PlaceMugButton" to="." method="_on_place_mug_button_pressed"]
+[connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/MakeCoffeeButton" to="." method="_on_make_coffee_button_pressed"]
