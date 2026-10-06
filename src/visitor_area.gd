@@ -25,7 +25,10 @@ class Visitor:
 
 
 	func display_text() -> String:
-		return "%s orders a %s with %s" % [name, order.name, order.addition_list_string]
+		var result := "%s orders a %s" % [name, order.name]
+		if order.has_additions():
+			result += " with %s" % order.addition_list_string
+		return result
 
 
 var visitors: Array[Visitor] = [Visitor.new(), Visitor.new(), Visitor.new()]
