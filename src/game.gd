@@ -59,6 +59,7 @@ func _render() -> void:
 
 					item_cup_of_coffee:
 						inventory.remove_item(item)
+						inventory.add_item(item_coffee_mug_used)
 						_render()
 		)
 
@@ -84,7 +85,6 @@ func _on_add_water_button_pressed() -> void:
 func _on_make_coffee_button_pressed() -> void:
 	if coffee_maker.make_coffee():
 		inventory.add_item(item_cup_of_coffee)
-		inventory.add_item(item_coffee_mug_used)
 		_render()
 
 
