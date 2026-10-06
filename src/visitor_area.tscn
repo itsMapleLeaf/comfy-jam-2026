@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bx1d7vjushmpl"]
+
+[ext_resource type="Script" uid="uid://30uq715fijw4" path="res://src/visitor_area.gd" id="1_8y8ow"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3msxb"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="FrontCounterView" type="Control" unique_id=392973475]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8y8ow")
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=956415198]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 124.0
+offset_bottom = 56.0
+theme_override_constants/separation = 16
+vertical = true
+
+[node name="PanelContainer" type="PanelContainer" parent="BoxContainer" unique_id=479481268]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3msxb")
+
+[node name="FlowContainer" type="BoxContainer" parent="BoxContainer/PanelContainer" unique_id=1084783618]
+layout_mode = 2
+vertical = true
+
+[node name="Label" type="Label" parent="BoxContainer/PanelContainer/FlowContainer" unique_id=2055928542]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Visitors"
+
+[node name="Label2" type="Label" parent="BoxContainer/PanelContainer/FlowContainer" unique_id=1282160810]
+layout_mode = 2
+text = "TODO"
+
+[node name="FlowContainer" type="FlowContainer" parent="BoxContainer" unique_id=141047107]
+layout_mode = 2
+
+[node name="BackCounterButton" type="Button" parent="BoxContainer/FlowContainer" unique_id=1474996493]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Move to Back Counter"
+
+[connection signal="pressed" from="BoxContainer/FlowContainer/BackCounterButton" to="." method="_on_back_counter_button_pressed"]

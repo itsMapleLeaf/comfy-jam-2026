@@ -2,18 +2,8 @@
 
 [ext_resource type="Script" uid="uid://8auf6dr7y23l" path="res://src/game.gd" id="1_3msxb"]
 [ext_resource type="Texture2D" uid="uid://d2yuw4bvysbkc" path="res://assets/cafe_interior_bg.jpg" id="2_xq6wo"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80nbo"]
-content_margin_left = 8.0
-content_margin_top = 4.0
-content_margin_right = 8.0
-content_margin_bottom = 4.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
+[ext_resource type="PackedScene" uid="uid://dncy4ciqk5qvf" path="res://src/brewing_area.tscn" id="3_xq6wo"]
+[ext_resource type="PackedScene" uid="uid://bx1d7vjushmpl" path="res://src/visitor_area.tscn" id="4_kc8ui"]
 
 [node name="Game" type="Control" unique_id=544035699]
 layout_mode = 3
@@ -36,68 +26,11 @@ texture = ExtResource("2_xq6wo")
 expand_mode = 3
 stretch_mode = 6
 
-[node name="BoxContainer" type="BoxContainer" parent="." unique_id=730777997]
+[node name="VisitorArea" parent="." unique_id=392973475 instance=ExtResource("4_kc8ui")]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 420.0
-offset_bottom = 201.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 16
-vertical = true
 
-[node name="PanelContainer" type="PanelContainer" parent="BoxContainer" unique_id=1294076730]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_80nbo")
-
-[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/PanelContainer" unique_id=11449579]
-layout_mode = 2
-vertical = true
-
-[node name="Heading" type="Label" parent="BoxContainer/PanelContainer/BoxContainer" unique_id=1760432837]
-layout_mode = 2
-theme_override_font_sizes/font_size = 36
-text = "Inventory"
-
-[node name="InventoryItemListContainer" type="FlowContainer" parent="BoxContainer/PanelContainer/BoxContainer" unique_id=1517337108]
+[node name="BrewingArea" parent="." unique_id=508842634 instance=ExtResource("3_xq6wo")]
 unique_name_in_owner = true
-layout_mode = 2
-
-[node name="BoxContainer" type="BoxContainer" parent="BoxContainer" unique_id=1934778719]
-layout_mode = 2
-vertical = true
-
-[node name="PanelContainer" type="PanelContainer" parent="BoxContainer/BoxContainer" unique_id=887650604]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_80nbo")
-
-[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/BoxContainer/PanelContainer" unique_id=689239252]
-layout_mode = 2
-vertical = true
-
-[node name="Heading" type="Label" parent="BoxContainer/BoxContainer/PanelContainer/BoxContainer" unique_id=127572392]
-layout_mode = 2
-theme_override_font_sizes/font_size = 36
-text = "Coffee Maker"
-
-[node name="CoffeeMachineState" type="Label" parent="BoxContainer/BoxContainer/PanelContainer/BoxContainer" unique_id=1835845679]
-unique_name_in_owner = true
-layout_mode = 2
-text = "CoffeeMachineState"
-
-[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/BoxContainer" unique_id=1287020466]
-layout_mode = 2
-
-[node name="AddWaterButton" type="Button" parent="BoxContainer/BoxContainer/BoxContainer" unique_id=561913781]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Add Water"
-
-[node name="MakeCoffeeButton" type="Button" parent="BoxContainer/BoxContainer/BoxContainer" unique_id=750632077]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Make Coffee"
-
-[connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/AddWaterButton" to="." method="_on_add_water_button_pressed"]
-[connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/MakeCoffeeButton" to="." method="_on_make_coffee_button_pressed"]
+visible = false
+layout_mode = 0

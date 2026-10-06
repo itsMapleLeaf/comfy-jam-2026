@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://dncy4ciqk5qvf"]
+
+[ext_resource type="Script" uid="uid://c3frvxv0gruck" path="res://src/brewing_area.gd" id="1_vdpur"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80nbo"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="BackCounterView" type="Control" unique_id=508842634]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_vdpur")
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=295410594]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 420.0
+offset_bottom = 201.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+vertical = true
+
+[node name="PanelContainer" type="PanelContainer" parent="BoxContainer" unique_id=2000607133]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_80nbo")
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/PanelContainer" unique_id=261576634]
+layout_mode = 2
+vertical = true
+
+[node name="Heading" type="Label" parent="BoxContainer/PanelContainer/BoxContainer" unique_id=455469788]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Inventory"
+
+[node name="InventoryItemListContainer" type="FlowContainer" parent="BoxContainer/PanelContainer/BoxContainer" unique_id=575365471]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer" unique_id=607539316]
+layout_mode = 2
+vertical = true
+
+[node name="PanelContainer" type="PanelContainer" parent="BoxContainer/BoxContainer" unique_id=1262297764]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_80nbo")
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/BoxContainer/PanelContainer" unique_id=1756300431]
+layout_mode = 2
+vertical = true
+
+[node name="Heading" type="Label" parent="BoxContainer/BoxContainer/PanelContainer/BoxContainer" unique_id=647344125]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Coffee Maker"
+
+[node name="CoffeeMachineState" type="Label" parent="BoxContainer/BoxContainer/PanelContainer/BoxContainer" unique_id=1318609250]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CoffeeMachineState"
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/BoxContainer" unique_id=1914228298]
+layout_mode = 2
+
+[node name="AddWaterButton" type="Button" parent="BoxContainer/BoxContainer/BoxContainer" unique_id=997430281]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add Water"
+
+[node name="MakeCoffeeButton" type="Button" parent="BoxContainer/BoxContainer/BoxContainer" unique_id=31076182]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Make Coffee"
+
+[node name="FlowContainer" type="FlowContainer" parent="BoxContainer" unique_id=1602798151]
+layout_mode = 2
+
+[node name="FrontCounterButton" type="Button" parent="BoxContainer/FlowContainer" unique_id=1214072987]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Move to Front Counter"
+
+[connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/AddWaterButton" to="." method="_on_add_water_button_pressed"]
+[connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/MakeCoffeeButton" to="." method="_on_make_coffee_button_pressed"]
+[connection signal="pressed" from="BoxContainer/FlowContainer/FrontCounterButton" to="." method="_on_front_counter_button_pressed"]
