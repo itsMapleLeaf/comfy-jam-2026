@@ -7,9 +7,6 @@ const COFFEE_NAMES: Array[String] = [
 ]
 
 const TEA_NAMES: Array[String] = [
-	"Light Roast Coffee",
-	"Medium Roast Coffee",
-	"Dark Roast Coffee",
 	"Green Tea",
 	"Black Tea",
 	"Raspberry Tea",
@@ -22,6 +19,7 @@ const TEA_NAMES: Array[String] = [
 const DRINK_NAMES: Array[String] = COFFEE_NAMES + TEA_NAMES
 
 var name: String
+# Using a pseudo-set truthy dict, because we don't want an addition included twice
 var additions: Dictionary[Addition, bool] = { }
 
 var addition_list_string: String:
