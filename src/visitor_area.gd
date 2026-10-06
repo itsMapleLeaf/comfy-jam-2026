@@ -31,12 +31,35 @@ class Visitor:
 		return result
 
 
-var visitors: Array[Visitor] = [Visitor.new(), Visitor.new(), Visitor.new()]
+	func get_new_name() -> void:
+		name = VISITOR_NAMES.pick_random()
+
+
+var visitors: Array[Visitor] = []
 @onready var visitor_list_container: FlowContainer = %VisitorListContainer
 
 
 func _ready() -> void:
+	for i in 3:
+		_add_visitor()
 	_render()
+
+
+func _add_visitor() -> void:
+	var visitor := Visitor.new()
+
+	while _is_visitor_name_used(visitor):
+		push_warning("Visitor name %s already taken" % visitor.name)
+		visitor.get_new_name()
+
+	visitors.append(visitor)
+
+
+func _is_visitor_name_used(visitor: Visitor) -> bool:
+	return visitors.any(
+		func(v: Visitor):
+			return v.name == visitor.name,
+	)
 
 
 func _render() -> void:
