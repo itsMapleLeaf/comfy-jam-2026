@@ -15,7 +15,7 @@ func _ready() -> void:
 	for i in slots.size():
 		var slot := slots[i]
 		slot.position = Vector2(100, 100) + Vector2(80 * i, 0)
-		movable.add_slot(slot)
+		movable.add_child(slot)
 
 
 class DemoItem extends Movable.Item:

@@ -1,14 +1,20 @@
 class_name Movable
 extends Control
 
-var slots: Array[Slot] = []
 var active_item: Item = null
 
 
-func add_slot(slot: Slot) -> Slot:
-	slot.clicked.connect(_on_slot_clicked.bind(slot))
+func _ready() -> void:
+	child_entered_tree.connect(_on_child_entered_tree)
+
+
+func _on_child_entered_tree(child: Node) -> void:
+	var slot := child as Slot
+	if not slot:
+		return
+
 	add_child(slot)
-	return slot
+	slot.clicked.connect(_on_slot_clicked.bind(slot))
 
 
 func _on_slot_clicked(slot: Slot) -> void:
