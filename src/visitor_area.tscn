@@ -34,18 +34,18 @@ vertical = true
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_3msxb")
 
-[node name="FlowContainer" type="BoxContainer" parent="BoxContainer/PanelContainer" unique_id=1084783618]
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/PanelContainer" unique_id=1084783618]
 layout_mode = 2
 vertical = true
 
-[node name="Label" type="Label" parent="BoxContainer/PanelContainer/FlowContainer" unique_id=2055928542]
+[node name="Label" type="Label" parent="BoxContainer/PanelContainer/BoxContainer" unique_id=2055928542]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "Visitors"
 
-[node name="Label2" type="Label" parent="BoxContainer/PanelContainer/FlowContainer" unique_id=1282160810]
+[node name="VisitorListContainer" type="FlowContainer" parent="BoxContainer/PanelContainer/BoxContainer" unique_id=804354174]
+unique_name_in_owner = true
 layout_mode = 2
-text = "TODO"
 
 [node name="FlowContainer" type="FlowContainer" parent="BoxContainer" unique_id=141047107]
 layout_mode = 2
