@@ -87,11 +87,11 @@ text = "Make Coffee"
 [node name="FlowContainer" type="FlowContainer" parent="BoxContainer" unique_id=1602798151]
 layout_mode = 2
 
-[node name="FrontCounterButton" type="Button" parent="BoxContainer/FlowContainer" unique_id=1214072987]
+[node name="VisitorAreaButton" type="Button" parent="BoxContainer/FlowContainer" unique_id=1214072987]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Move to Front Counter"
+text = "Move to Visitors"
 
 [connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/AddWaterButton" to="." method="_on_add_water_button_pressed"]
 [connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/MakeCoffeeButton" to="." method="_on_make_coffee_button_pressed"]
-[connection signal="pressed" from="BoxContainer/FlowContainer/FrontCounterButton" to="." method="_on_front_counter_button_pressed"]
+[connection signal="pressed" from="BoxContainer/FlowContainer/VisitorAreaButton" to="." method="_on_front_counter_button_pressed"]

@@ -50,9 +50,9 @@ layout_mode = 2
 [node name="FlowContainer" type="FlowContainer" parent="BoxContainer" unique_id=141047107]
 layout_mode = 2
 
-[node name="BackCounterButton" type="Button" parent="BoxContainer/FlowContainer" unique_id=1474996493]
+[node name="BrewingAreaButton" type="Button" parent="BoxContainer/FlowContainer" unique_id=1474996493]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Move to Back Counter"
+text = "Move to Brewing"
 
-[connection signal="pressed" from="BoxContainer/FlowContainer/BackCounterButton" to="." method="_on_back_counter_button_pressed"]
+[connection signal="pressed" from="BoxContainer/FlowContainer/BrewingAreaButton" to="." method="_on_back_counter_button_pressed"]
