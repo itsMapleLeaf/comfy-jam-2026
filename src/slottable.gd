@@ -1,4 +1,4 @@
-class_name Movable
+class_name Slottable
 extends Control
 
 var active_item: Item = null

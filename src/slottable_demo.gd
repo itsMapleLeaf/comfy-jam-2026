@@ -1,10 +1,10 @@
-class_name MovableDemo
+class_name SlottableDemo
 extends Control
 
 
 func _ready() -> void:
-	var movable := Movable.new()
-	add_child(movable)
+	var slottable := Slottable.new()
+	add_child(slottable)
 
 	var slots: Array[DemoSlot] = [
 		DemoSlot.new(DemoItem.new(Color.PALE_VIOLET_RED)),
@@ -15,10 +15,10 @@ func _ready() -> void:
 	for i in slots.size():
 		var slot := slots[i]
 		slot.position = Vector2(100, 100) + Vector2(80 * i, 0)
-		movable.add_child(slot)
+		slottable.add_child(slot)
 
 
-class DemoItem extends Movable.Item:
+class DemoItem extends Slottable.Item:
 	var initial_color: Color
 
 
@@ -40,7 +40,7 @@ class DemoItem extends Movable.Item:
 		super()
 
 
-class DemoSlot extends Movable.Slot:
+class DemoSlot extends Slottable.Slot:
 	func _ready() -> void:
 		var rect := ColorRect.new()
 		add_child(rect)
