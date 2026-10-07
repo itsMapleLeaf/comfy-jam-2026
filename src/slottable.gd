@@ -13,7 +13,6 @@ func _on_child_entered_tree(child: Node) -> void:
 	if not slot:
 		return
 
-	add_child(slot)
 	slot.clicked.connect(_on_slot_clicked.bind(slot))
 
 
