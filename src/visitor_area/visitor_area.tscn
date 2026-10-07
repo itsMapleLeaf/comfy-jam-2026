@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bx1d7vjushmpl"]
+
+[ext_resource type="Script" uid="uid://30uq715fijw4" path="res://src/visitor_area/visitor_area.gd" id="1_xs5w4"]
+[ext_resource type="PackedScene" uid="uid://m03vint7ofw2" path="res://src/ui/screen_layout.tscn" id="2_3eus5"]
+[ext_resource type="PackedScene" uid="uid://h50pv2xq04dl" path="res://src/ui/section_panel.tscn" id="3_qaqb2"]
+
+[node name="VisitorArea" type="Control" unique_id=392973475]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xs5w4")
+
+[node name="ScreenLayout" parent="." unique_id=1515221928 instance=ExtResource("2_3eus5")]
+layout_mode = 1
+
+[node name="VisitorSection" parent="ScreenLayout/VBoxContainer/BoxContainer" parent_id_path=PackedInt32Array(1515221928, 92853428) index="0" unique_id=579084514 instance=ExtResource("3_qaqb2")]
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+
+[node name="Heading" parent="ScreenLayout/VBoxContainer/BoxContainer/VisitorSection/BoxContainer" parent_id_path=PackedInt32Array(579084514, 121182546) index="0" unique_id=1990267864]
+text = "Visitors"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/VisitorSection/BoxContainer" parent_id_path=PackedInt32Array(579084514, 121182546) index="1" unique_id=301689202]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VisitorListContainer" type="VBoxContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/VisitorSection/BoxContainer/ScrollContainer" unique_id=1822154993]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DrinkSection" parent="ScreenLayout/VBoxContainer/BoxContainer" parent_id_path=PackedInt32Array(1515221928, 92853428) index="1" unique_id=1605165466 instance=ExtResource("3_qaqb2")]
+layout_mode = 2
+
+[node name="Heading" parent="ScreenLayout/VBoxContainer/BoxContainer/DrinkSection/BoxContainer" parent_id_path=PackedInt32Array(1605165466, 121182546) index="0" unique_id=1990267864]
+text = "Drinks"
+
+[node name="DrinkList" type="FlowContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/DrinkSection/BoxContainer" parent_id_path=PackedInt32Array(1605165466, 121182546) index="1" unique_id=52068552]
+layout_mode = 2
+
+[node name="BrewingAreaButton" type="Button" parent="ScreenLayout/VBoxContainer" parent_id_path=PackedInt32Array(1515221928, 2098851573) index="1" unique_id=1474996493]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Move to Brewing"
+
+[connection signal="pressed" from="ScreenLayout/VBoxContainer/BrewingAreaButton" to="." method="_on_back_counter_button_pressed"]
+
+[editable path="ScreenLayout"]
+[editable path="ScreenLayout/VBoxContainer/BoxContainer/VisitorSection"]
+[editable path="ScreenLayout/VBoxContainer/BoxContainer/DrinkSection"]

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://df7c5n4734pwa"]
+
+[node name="BrewingSlot" type="BoxContainer" unique_id=669412489]
+size_flags_horizontal = 3
+alignment = 1
+vertical = true
+
+[node name="Ingredient" type="Label" parent="." unique_id=996797826]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Ingredient"
+
+[node name="Ingredient2" type="Label" parent="." unique_id=1135646751]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Mug"
+
+[node name="Button" type="Button" parent="." unique_id=1014252759]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Brew"

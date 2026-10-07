@@ -36,7 +36,7 @@ class Visitor:
 
 
 var visitors: Array[Visitor] = []
-@onready var visitor_list_container: FlowContainer = %VisitorListContainer
+@onready var visitor_list_container: Container = %VisitorListContainer
 
 
 func _ready() -> void:

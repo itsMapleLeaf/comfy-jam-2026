@@ -1,0 +1,216 @@
+[gd_scene format=3 uid="uid://dncy4ciqk5qvf"]
+
+[ext_resource type="Script" uid="uid://c3frvxv0gruck" path="res://src/brewing_area/brewing_area.gd" id="1_vdpur"]
+[ext_resource type="PackedScene" uid="uid://m03vint7ofw2" path="res://src/ui/screen_layout.tscn" id="2_n6olg"]
+[ext_resource type="PackedScene" uid="uid://h50pv2xq04dl" path="res://src/ui/section_panel.tscn" id="2_q5u70"]
+[ext_resource type="PackedScene" uid="uid://df7c5n4734pwa" path="res://src/brewing_area/brewing_slot.tscn" id="3_4xtud"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80nbo"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="BackCounterView" type="Control" unique_id=508842634]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vdpur")
+
+[node name="ScreenLayout" parent="." unique_id=1515221928 instance=ExtResource("2_n6olg")]
+layout_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScreenLayout/VBoxContainer/BoxContainer" parent_id_path=PackedInt32Array(1515221928, 92853428) index="0" unique_id=1931307067]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="BrewingSection" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer" unique_id=579084514 instance=ExtResource("2_q5u70")]
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+
+[node name="Heading" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer/BrewingSection/BoxContainer" parent_id_path=PackedInt32Array(579084514, 121182546) index="0" unique_id=1990267864]
+text = "Brewing"
+
+[node name="Slots" type="BoxContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer/BrewingSection/BoxContainer" parent_id_path=PackedInt32Array(579084514, 121182546) index="1" unique_id=1739436510]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BrewingSlot1" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer/BrewingSection/BoxContainer/Slots" unique_id=669412489 instance=ExtResource("3_4xtud")]
+layout_mode = 2
+
+[node name="BrewingSlot2" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer/BrewingSection/BoxContainer/Slots" unique_id=871861381 instance=ExtResource("3_4xtud")]
+layout_mode = 2
+
+[node name="BrewingSlot3" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer/BrewingSection/BoxContainer/Slots" unique_id=1056216604 instance=ExtResource("3_4xtud")]
+layout_mode = 2
+
+[node name="IngredientSection" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer" unique_id=152002167 instance=ExtResource("2_q5u70")]
+layout_mode = 2
+
+[node name="Heading" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer/IngredientSection/BoxContainer" parent_id_path=PackedInt32Array(152002167, 121182546) index="0" unique_id=1990267864]
+text = "Ingredients"
+
+[node name="FlowContainer" type="FlowContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer/IngredientSection/BoxContainer" parent_id_path=PackedInt32Array(152002167, 121182546) index="1" unique_id=1615939474]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer/IngredientSection/BoxContainer/FlowContainer" unique_id=119676070]
+layout_mode = 2
+text = "The Funny One (x1)"
+
+[node name="Button2" type="Button" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer/IngredientSection/BoxContainer/FlowContainer" unique_id=1218382331]
+layout_mode = 2
+text = "The Funny One (x1)"
+
+[node name="Button3" type="Button" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer/IngredientSection/BoxContainer/FlowContainer" unique_id=1439454737]
+layout_mode = 2
+text = "The Funny One (x1)"
+
+[node name="Button4" type="Button" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer/IngredientSection/BoxContainer/FlowContainer" unique_id=1832213906]
+layout_mode = 2
+text = "The Funny One (x1)"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScreenLayout/VBoxContainer/BoxContainer" parent_id_path=PackedInt32Array(1515221928, 92853428) index="1" unique_id=1237917268]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MugsSection" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2" unique_id=505553785 instance=ExtResource("2_q5u70")]
+layout_mode = 2
+
+[node name="Heading" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/MugsSection/BoxContainer" parent_id_path=PackedInt32Array(505553785, 121182546) index="0" unique_id=1990267864]
+text = "Mugs"
+
+[node name="MugList" type="FlowContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/MugsSection/BoxContainer" parent_id_path=PackedInt32Array(505553785, 121182546) index="1" unique_id=1940368324]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/MugsSection/BoxContainer/MugList" unique_id=242254694]
+layout_mode = 2
+text = "The Funny One (x1)"
+
+[node name="Button2" type="Button" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/MugsSection/BoxContainer/MugList" unique_id=1825795123]
+layout_mode = 2
+text = "The Funny One (x1)"
+
+[node name="Button3" type="Button" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/MugsSection/BoxContainer/MugList" unique_id=1010648528]
+layout_mode = 2
+text = "The Funny One (x1)"
+
+[node name="Button4" type="Button" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/MugsSection/BoxContainer/MugList" unique_id=887303049]
+layout_mode = 2
+text = "The Funny One (x1)"
+
+[node name="DrinkSection" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2" unique_id=1662703456 instance=ExtResource("2_q5u70")]
+layout_mode = 2
+
+[node name="Heading" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/DrinkSection/BoxContainer" parent_id_path=PackedInt32Array(1662703456, 121182546) index="0" unique_id=1990267864]
+text = "Drinks"
+
+[node name="MugList" type="FlowContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/DrinkSection/BoxContainer" parent_id_path=PackedInt32Array(1662703456, 121182546) index="1" unique_id=1695073413]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/DrinkSection/BoxContainer/MugList" unique_id=1987283288]
+layout_mode = 2
+text = "The Funny One (x1)"
+
+[node name="Button2" type="Button" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/DrinkSection/BoxContainer/MugList" unique_id=2010505165]
+layout_mode = 2
+text = "The Funny One (x1)"
+
+[node name="Button3" type="Button" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/DrinkSection/BoxContainer/MugList" unique_id=388682741]
+layout_mode = 2
+text = "The Funny One (x1)"
+
+[node name="Button4" type="Button" parent="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/DrinkSection/BoxContainer/MugList" unique_id=1031266271]
+layout_mode = 2
+text = "The Funny One (x1)"
+
+[node name="VisitorAreaButton" type="Button" parent="ScreenLayout/VBoxContainer" parent_id_path=PackedInt32Array(1515221928, 2098851573) index="1" unique_id=1214072987]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Move to Visitors"
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=295410594]
+visible = false
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 420.0
+offset_bottom = 201.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+vertical = true
+
+[node name="PanelContainer" type="PanelContainer" parent="BoxContainer" unique_id=2000607133]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_80nbo")
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/PanelContainer" unique_id=261576634]
+layout_mode = 2
+vertical = true
+
+[node name="Heading" type="Label" parent="BoxContainer/PanelContainer/BoxContainer" unique_id=455469788]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Inventory"
+
+[node name="InventoryItemListContainer" type="FlowContainer" parent="BoxContainer/PanelContainer/BoxContainer" unique_id=575365471]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer" unique_id=607539316]
+layout_mode = 2
+vertical = true
+
+[node name="PanelContainer" type="PanelContainer" parent="BoxContainer/BoxContainer" unique_id=1262297764]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_80nbo")
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/BoxContainer/PanelContainer" unique_id=1756300431]
+layout_mode = 2
+vertical = true
+
+[node name="Heading" type="Label" parent="BoxContainer/BoxContainer/PanelContainer/BoxContainer" unique_id=647344125]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Coffee Maker"
+
+[node name="CoffeeMachineState" type="Label" parent="BoxContainer/BoxContainer/PanelContainer/BoxContainer" unique_id=1318609250]
+unique_name_in_owner = true
+layout_mode = 2
+text = "CoffeeMachineState"
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/BoxContainer" unique_id=1914228298]
+layout_mode = 2
+
+[node name="AddWaterButton" type="Button" parent="BoxContainer/BoxContainer/BoxContainer" unique_id=997430281]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add Water"
+
+[node name="MakeCoffeeButton" type="Button" parent="BoxContainer/BoxContainer/BoxContainer" unique_id=31076182]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Make Coffee"
+
+[node name="FlowContainer" type="FlowContainer" parent="BoxContainer" unique_id=1602798151]
+layout_mode = 2
+
+[connection signal="pressed" from="ScreenLayout/VBoxContainer/VisitorAreaButton" to="." method="_on_front_counter_button_pressed"]
+[connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/AddWaterButton" to="." method="_on_add_water_button_pressed"]
+[connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/MakeCoffeeButton" to="." method="_on_make_coffee_button_pressed"]
+
+[editable path="ScreenLayout"]
+[editable path="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer/BrewingSection"]
+[editable path="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer/IngredientSection"]
+[editable path="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/MugsSection"]
+[editable path="ScreenLayout/VBoxContainer/BoxContainer/VBoxContainer2/DrinkSection"]

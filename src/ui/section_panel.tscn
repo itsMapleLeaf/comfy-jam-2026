@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://h50pv2xq04dl"]
+
+[ext_resource type="Theme" uid="uid://cp8g7m18vllue" path="res://assets/ui.theme" id="1_mkdb2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5guqq"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="SectionPanel" type="PanelContainer" unique_id=579084514]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_mkdb2")
+theme_override_styles/panel = SubResource("StyleBoxFlat_5guqq")
+
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=121182546]
+layout_mode = 2
+vertical = true
+
+[node name="Heading" type="Label" parent="BoxContainer" unique_id=1990267864]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+text = "HeadingText"
