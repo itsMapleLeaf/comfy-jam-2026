@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://dnap4dpc1c1u2"]
+
+[ext_resource type="Script" uid="uid://xy58n7nsyh57" path="res://src/item_resource.gd" id="1_7cxvp"]
+[ext_resource type="Texture2D" uid="uid://csgeqc27daye2" path="res://assets/coffee_tools_03.png" id="2_7cxvp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_koeq0"]
+resource_local_to_scene = true
+atlas = ExtResource("2_7cxvp")
+region = Rect2(80, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_7cxvp")
+name = "Medium Roast Grounds"
+texture = SubResource("AtlasTexture_koeq0")
+type = 1
+metadata/_custom_type_script = "uid://xy58n7nsyh57"
