@@ -66,10 +66,11 @@ text = "Inventory"
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="InventoryItems" type="FlowContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/ScrollContainer" unique_id=1940368324]
+[node name="InventoryItems" type="GridContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/ScrollContainer" unique_id=636935330]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+columns = 5
 
 [node name="VisitorAreaButton" type="Button" parent="ScreenLayout/VBoxContainer" parent_id_path=PackedInt32Array(1515221928, 2098851573) index="1" unique_id=1214072987]
 unique_name_in_owner = true

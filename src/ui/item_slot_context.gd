@@ -17,24 +17,25 @@ func register(slot: ItemSlot) -> void:
 
 
 func _on_slot_pressed(slot: ItemSlot) -> void:
+	# picking up an item
 	if slot.sprite.item and not active_sprite.item:
 		active_sprite.item = slot.sprite.item
 		slot.sprite.item = null
 
 		slot_changed.emit()
 
+	# placing an item
 	elif not slot.sprite.item and active_sprite.item:
-		slot.sprite.item = active_sprite.item
-		active_sprite.item = null
+		if slot.try_place(active_sprite.item):
+			active_sprite.item = null
+			slot_changed.emit()
 
-		slot_changed.emit()
-
+	# swapping the item
 	elif slot.sprite.item and active_sprite.item:
 		var slot_item := slot.sprite.item
-		slot.sprite.item = active_sprite.item
-		active_sprite.item = slot_item
-
-		slot_changed.emit()
+		if slot.try_place(active_sprite.item):
+			active_sprite.item = slot_item
+			slot_changed.emit()
 
 
 func _process(delta: float) -> void:
