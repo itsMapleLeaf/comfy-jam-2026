@@ -1,4 +1,4 @@
-class_name ItemResource
+class_name ItemSpec
 extends Resource
 
 @export var name := "Generic Item"

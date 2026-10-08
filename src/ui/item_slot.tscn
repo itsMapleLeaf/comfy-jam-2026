@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c4todsa5032e2"]
+
+[ext_resource type="Script" uid="uid://jwb0oojlk06" path="res://src/ui/item_slot.gd" id="1_jd8g2"]
+[ext_resource type="PackedScene" uid="uid://bko34xbjepf62" path="res://src/item_sprite.tscn" id="2_havih"]
+
+[node name="ItemSlot" type="Button" unique_id=62184073]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_jd8g2")
+
+[node name="ItemSprite" parent="." unique_id=197097455 instance=ExtResource("2_havih")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -28.0
+offset_right = 28.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://df7c5n4734pwa"]
 
 [ext_resource type="Script" uid="uid://c8mfaljnhec1b" path="res://src/brewing_area/brewing_slot.gd" id="1_3585x"]
-[ext_resource type="PackedScene" uid="uid://c4todsa5032e2" path="res://src/ui/item_button.tscn" id="2_rbadk"]
+[ext_resource type="PackedScene" uid="uid://c4todsa5032e2" path="res://src/ui/item_slot.tscn" id="2_rbadk"]
 
 [node name="BrewingSlot" type="BoxContainer" unique_id=669412489]
 size_flags_horizontal = 3
@@ -15,6 +15,7 @@ custom_maximum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+max_count = 1
 
 [node name="MugSlot" parent="." unique_id=656052424 instance=ExtResource("2_rbadk")]
 unique_name_in_owner = true
@@ -22,6 +23,7 @@ custom_maximum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+max_count = 1
 
 [node name="BrewButton" type="Button" parent="." unique_id=1014252759]
 unique_name_in_owner = true
