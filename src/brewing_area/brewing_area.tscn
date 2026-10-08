@@ -58,6 +58,7 @@ layout_mode = 2
 
 [node name="MugSection" parent="ScreenLayout/VBoxContainer/BoxContainer" parent_id_path=PackedInt32Array(1515221928, 92853428) index="1" unique_id=505553785 instance=ExtResource("2_q5u70")]
 layout_mode = 2
+size_flags_stretch_ratio = 1.06
 
 [node name="Heading" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer" parent_id_path=PackedInt32Array(505553785, 121182546) index="0" unique_id=1990267864]
 text = "Inventory"
