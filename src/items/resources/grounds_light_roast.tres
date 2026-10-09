@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="IngredientSpec" format=3 uid="uid://cpdvsml6ehh57"]
+
+[ext_resource type="Resource" uid="uid://bkoq0nh8gijod" path="res://src/items/resources/drink_coffee_light_roast.tres" id="1_u32db"]
+[ext_resource type="Script" uid="uid://bbnxmrm6rn6wn" path="res://src/items/ingredient_spec.gd" id="2_jr5i0"]
+[ext_resource type="Texture2D" uid="uid://csgeqc27daye2" path="res://assets/coffee_tools_03.png" id="2_u32db"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_koeq0"]
+resource_local_to_scene = true
+atlas = ExtResource("2_u32db")
+region = Rect2(64, 0, 16, 16)
+
+[resource]
+script = ExtResource("2_jr5i0")
+brews = ExtResource("1_u32db")
+name = "Light Roast Grounds"
+type = 1
+texture = SubResource("AtlasTexture_koeq0")
+metadata/_custom_type_script = "uid://xy58n7nsyh57"

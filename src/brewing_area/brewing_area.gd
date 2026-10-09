@@ -13,11 +13,12 @@ const ITEM_SLOT = preload("uid://c4todsa5032e2")
 func _ready() -> void:
 	_register_inventory_slots()
 
-	_add_to_inventory_from_spec(load("res://src/items/grounds_medium_roast.tres") as ItemSpec, 3)
-	_add_to_inventory_from_spec(load("res://src/items/mug_white.tres") as ItemSpec)
-	_add_to_inventory_from_spec(load("res://src/items/mug_white.tres") as ItemSpec)
-	_add_to_inventory_from_spec(load("res://src/items/mug_white.tres") as ItemSpec)
-	_add_to_inventory_from_spec(load("res://src/items/drink_coffee_light_roast.tres") as ItemSpec)
+	for i in 5:
+		_add_to_inventory_from_spec(ItemLibrary.MUG_WHITE)
+
+	_add_to_inventory_from_spec(ItemLibrary.GROUNDS_LIGHT_ROAST, 3)
+	_add_to_inventory_from_spec(ItemLibrary.GROUNDS_MEDIUM_ROAST, 3)
+	_add_to_inventory_from_spec(ItemLibrary.GROUNDS_DARK_ROAST, 3)
 
 	for brewing_slot: BrewingSlot in brewing_slots.get_children():
 		brewing_slot.register_item_slots(item_slot_context)

@@ -12,7 +12,7 @@ func _ready() -> void:
 	brew_button.pressed.connect(_on_brew_button_pressed)
 
 	ingredient_slot.accepts = func(item: ItemState) -> bool:
-		return item.spec.type == ItemSpec.ItemType.INGREDIENT
+		return item.spec is IngredientSpec
 
 	mug_slot.accepts = func(item: ItemState) -> bool:
 		return item.spec.type == ItemSpec.ItemType.MUG
@@ -21,11 +21,11 @@ func _ready() -> void:
 
 
 func _on_brew_button_pressed() -> void:
+	var drink := ItemState.new()
+	drink.spec = (ingredient_slot.get_item_spec() as IngredientSpec).brews
+
 	ingredient_slot.decrement_item_count()
 	mug_slot.decrement_item_count()
-
-	var drink := ItemState.new()
-	drink.spec = load("res://src/items/drink_coffee_light_roast.tres")
 
 	brewed.emit(drink)
 

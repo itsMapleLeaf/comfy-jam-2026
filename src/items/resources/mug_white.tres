@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://ducefivmn760u"]
+[gd_resource type="Resource" script_class="ItemSpec" format=3 uid="uid://ducefivmn760u"]
 
 [ext_resource type="Script" uid="uid://xy58n7nsyh57" path="res://src/items/item_spec.gd" id="1_tb77j"]
 [ext_resource type="Texture2D" uid="uid://djpqgrdxfeaeh" path="res://assets/hot_coffee_03.png" id="2_w0ww0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_koeq0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgsbl"]
 resource_local_to_scene = true
 atlas = ExtResource("2_w0ww0")
 region = Rect2(80, 0, 16, 16)
@@ -11,5 +11,5 @@ region = Rect2(80, 0, 16, 16)
 [resource]
 script = ExtResource("1_tb77j")
 name = "White Mug"
-texture = SubResource("AtlasTexture_koeq0")
+texture = SubResource("AtlasTexture_kgsbl")
 metadata/_custom_type_script = "uid://xy58n7nsyh57"

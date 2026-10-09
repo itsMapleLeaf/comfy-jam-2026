@@ -23,6 +23,14 @@ func has_item() -> bool:
 	return sprite.item != null
 
 
+func get_item_spec() -> ItemSpec:
+	return (sprite.item.spec if sprite and sprite.item else null)
+
+
+func get_item() -> ItemState:
+	return (sprite.item if sprite else null)
+
+
 func decrement_item_count() -> void:
 	var new_item := sprite.item
 	new_item.duplicate()

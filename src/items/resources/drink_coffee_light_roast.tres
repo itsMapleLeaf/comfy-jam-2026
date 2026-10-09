@@ -3,14 +3,14 @@
 [ext_resource type="Script" uid="uid://xy58n7nsyh57" path="res://src/items/item_spec.gd" id="1_goo42"]
 [ext_resource type="Texture2D" uid="uid://djpqgrdxfeaeh" path="res://assets/hot_coffee_03.png" id="2_jnufb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_koeq0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_h38mf"]
 resource_local_to_scene = true
 atlas = ExtResource("2_jnufb")
-region = Rect2(16, 48, 16, 16)
+region = Rect2(0, 32, 16, 16)
 
 [resource]
 script = ExtResource("1_goo42")
 name = "Light Roast Coffee"
 type = 2
-texture = SubResource("AtlasTexture_koeq0")
+texture = SubResource("AtlasTexture_h38mf")
 metadata/_custom_type_script = "uid://xy58n7nsyh57"

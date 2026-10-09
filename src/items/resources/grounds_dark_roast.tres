@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="IngredientSpec" format=3 uid="uid://brhfbejq6raqc"]
+
+[ext_resource type="Resource" uid="uid://cxr8kvxw7x084" path="res://src/items/resources/drink_coffee_dark_roast.tres" id="1_8knyp"]
+[ext_resource type="Texture2D" uid="uid://csgeqc27daye2" path="res://assets/coffee_tools_03.png" id="2_8knyp"]
+[ext_resource type="Script" uid="uid://bbnxmrm6rn6wn" path="res://src/items/ingredient_spec.gd" id="2_35cd4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8knyp"]
+resource_local_to_scene = true
+atlas = ExtResource("2_8knyp")
+region = Rect2(96, 0, 16, 16)
+
+[resource]
+script = ExtResource("2_35cd4")
+brews = ExtResource("1_8knyp")
+name = "Dark Roast Grounds"
+type = 1
+texture = SubResource("AtlasTexture_8knyp")
+metadata/_custom_type_script = "uid://xy58n7nsyh57"
