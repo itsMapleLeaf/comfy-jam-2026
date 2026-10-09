@@ -45,7 +45,7 @@ func _on_item_slot_context_slot_changed() -> void:
 func _add_to_inventory(item: ItemState) -> void:
 	var slot := _get_first_open_slot()
 	if slot:
-		slot.try_place(item)
+		slot.set_item_if_empty_and_accepted(item)
 
 	_update()
 

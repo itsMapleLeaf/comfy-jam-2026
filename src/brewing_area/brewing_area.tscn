@@ -40,78 +40,103 @@ columns = 5
 
 [node name="ItemSlot" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=62184073 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot2" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1148655868 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot3" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1375590550 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot4" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=616345342 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot5" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=2103234997 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot6" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1248009720 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot7" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=537523760 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot8" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=456602648 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot9" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=417765007 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot10" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=306318872 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot11" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1069601426 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot12" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=563200322 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot13" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1524022597 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot14" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=757990107 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot15" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1588510057 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot16" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=562196605 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot17" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1994575990 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot18" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1608063068 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot19" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1419241079 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot20" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=534907859 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot21" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=453324977 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot22" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1457325685 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot23" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=171598071 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot24" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1938992498 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="ItemSlot25" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1243912009 instance=ExtResource("6_afl66")]
 layout_mode = 2
+zone = &"inventory"
 
 [node name="BrewingSection" parent="ScreenLayout/VBoxContainer/BoxContainer" parent_id_path=PackedInt32Array(1515221928, 92853428) index="1" unique_id=579084514 instance=ExtResource("2_q5u70")]
 layout_mode = 2

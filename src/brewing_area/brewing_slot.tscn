@@ -15,7 +15,7 @@ custom_maximum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-max_count = 1
+zone = &"brewing_slot"
 
 [node name="MugSlot" parent="." unique_id=656052424 instance=ExtResource("2_rbadk")]
 unique_name_in_owner = true
@@ -23,7 +23,7 @@ custom_maximum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-max_count = 1
+zone = &"brewing_slot"
 
 [node name="BrewButton" type="Button" parent="." unique_id=1014252759]
 unique_name_in_owner = true

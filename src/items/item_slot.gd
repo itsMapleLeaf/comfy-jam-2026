@@ -2,6 +2,8 @@
 class_name ItemSlot
 extends Button
 
+@export var zone: StringName = &"default"
+
 var accepts: Callable = _default_accepts
 
 @onready var sprite: ItemSprite = %ItemSprite
@@ -31,6 +33,14 @@ func get_item() -> ItemState:
 	return (sprite.item if sprite else null)
 
 
+func set_item(item: ItemState) -> void:
+	sprite.item = item
+
+
+func remove_item() -> void:
+	sprite.item = null
+
+
 func decrement_item_count() -> void:
 	var new_item := sprite.item
 	new_item.duplicate()
@@ -42,7 +52,7 @@ func decrement_item_count() -> void:
 		sprite.item = null
 
 
-func try_place(item: ItemState) -> bool:
+func set_item_if_empty_and_accepted(item: ItemState) -> bool:
 	var accepted: bool = accepts.call(item)
 	if accepted:
 		sprite.item = item
