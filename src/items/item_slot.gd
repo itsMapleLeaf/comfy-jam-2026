@@ -33,7 +33,7 @@ func get_item() -> ItemState:
 	return (sprite.item if sprite else null)
 
 
-func set_item(item: ItemState) -> void:
+func overwrite_item(item: ItemState) -> void:
 	sprite.item = item
 
 

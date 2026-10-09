@@ -5,6 +5,8 @@ signal request_show_visitor_area
 
 const ITEM_SLOT = preload("uid://c4todsa5032e2")
 
+var mug_effects: Dictionary[int, MugEffect] = { }
+
 @onready var inventory_item_container: Control = %InventoryItems
 @onready var brewing_slots: Control = %BrewingSlots
 @onready var item_slot_context: ItemSlotContext = %ItemSlotContext
@@ -14,7 +16,8 @@ func _ready() -> void:
 	_register_inventory_slots()
 
 	for i in 5:
-		_add_to_inventory_from_spec(ItemLibrary.MUG_WHITE)
+		var mug := _add_to_inventory_from_spec(ItemLibrary.MUG_WHITE)
+		mug_effects[mug.id] = MugEffect.DarkenRoast.new()
 
 	_add_to_inventory_from_spec(ItemLibrary.GROUNDS_LIGHT_ROAST, 3)
 	_add_to_inventory_from_spec(ItemLibrary.GROUNDS_MEDIUM_ROAST, 3)
@@ -58,11 +61,12 @@ func _get_first_open_slot() -> ItemSlot:
 	return null
 
 
-func _add_to_inventory_from_spec(item_spec: ItemSpec, count := 1) -> void:
+func _add_to_inventory_from_spec(item_spec: ItemSpec, count := 1) -> ItemState:
 	var item := ItemState.new()
 	item.spec = item_spec
 	item.count = count
 	_add_to_inventory(item)
+	return item
 
 
 func _update() -> void:
@@ -72,3 +76,6 @@ func _update() -> void:
 
 func _on_front_counter_button_pressed() -> void:
 	request_show_visitor_area.emit()
+
+	for slot: BrewingSlot in brewing_slots.get_children():
+		slot.apply_mug_effects(mug_effects)
