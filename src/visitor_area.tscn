@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bx1d7vjushmpl"]
 
-[ext_resource type="Script" uid="uid://30uq715fijw4" path="res://src/visitor_area/visitor_area.gd" id="1_xs5w4"]
-[ext_resource type="PackedScene" uid="uid://m03vint7ofw2" path="res://src/ui/screen_layout.tscn" id="2_3eus5"]
-[ext_resource type="PackedScene" uid="uid://h50pv2xq04dl" path="res://src/ui/section_panel.tscn" id="3_qaqb2"]
+[ext_resource type="Script" uid="uid://30uq715fijw4" path="res://src/visitor_area.gd" id="1_xs5w4"]
+[ext_resource type="PackedScene" uid="uid://m03vint7ofw2" path="res://src/screen_layout.tscn" id="2_3eus5"]
+[ext_resource type="PackedScene" uid="uid://h50pv2xq04dl" path="res://src/section_panel.tscn" id="3_qaqb2"]
 
 [node name="VisitorArea" type="Control" unique_id=392973475]
 layout_mode = 3

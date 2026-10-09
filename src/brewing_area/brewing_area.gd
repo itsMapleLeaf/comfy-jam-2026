@@ -11,7 +11,7 @@ const ITEM_SLOT = preload("uid://c4todsa5032e2")
 
 
 func _ready() -> void:
-	_create_inventory_slots()
+	_register_inventory_slots()
 
 	_add_to_inventory_from_spec(load("res://src/items/grounds_medium_roast.tres") as ItemSpec, 3)
 	_add_to_inventory_from_spec(load("res://src/items/mug_white.tres") as ItemSpec)
@@ -28,10 +28,8 @@ func _ready() -> void:
 	_update()
 
 
-func _create_inventory_slots() -> void:
-	for i in 20:
-		var slot: ItemSlot = ITEM_SLOT.instantiate()
-		inventory_item_container.add_child(slot)
+func _register_inventory_slots() -> void:
+	for slot: ItemSlot in inventory_item_container.get_children():
 		item_slot_context.register(slot)
 
 

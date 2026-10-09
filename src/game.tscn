@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://8auf6dr7y23l" path="res://src/game.gd" id="1_3msxb"]
 [ext_resource type="Texture2D" uid="uid://d2yuw4bvysbkc" path="res://assets/cafe_interior_bg.jpg" id="2_xq6wo"]
 [ext_resource type="PackedScene" uid="uid://dncy4ciqk5qvf" path="res://src/brewing_area/brewing_area.tscn" id="3_xq6wo"]
-[ext_resource type="PackedScene" uid="uid://bx1d7vjushmpl" path="res://src/visitor_area/visitor_area.tscn" id="4_kc8ui"]
+[ext_resource type="PackedScene" uid="uid://bx1d7vjushmpl" path="res://src/visitor_area.tscn" id="4_kc8ui"]
 
 [node name="Game" type="Control" unique_id=544035699]
 layout_mode = 3

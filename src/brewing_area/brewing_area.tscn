@@ -1,22 +1,11 @@
 [gd_scene format=3 uid="uid://dncy4ciqk5qvf"]
 
 [ext_resource type="Script" uid="uid://c3frvxv0gruck" path="res://src/brewing_area/brewing_area.gd" id="1_vdpur"]
-[ext_resource type="PackedScene" uid="uid://m03vint7ofw2" path="res://src/ui/screen_layout.tscn" id="2_n6olg"]
-[ext_resource type="Script" uid="uid://cm1xfuw52sbu6" path="res://src/ui/item_slot_context.gd" id="2_p3tux"]
-[ext_resource type="PackedScene" uid="uid://h50pv2xq04dl" path="res://src/ui/section_panel.tscn" id="2_q5u70"]
+[ext_resource type="PackedScene" uid="uid://m03vint7ofw2" path="res://src/screen_layout.tscn" id="2_n6olg"]
+[ext_resource type="Script" uid="uid://cm1xfuw52sbu6" path="res://src/items/item_slot_context.gd" id="2_p3tux"]
+[ext_resource type="PackedScene" uid="uid://h50pv2xq04dl" path="res://src/section_panel.tscn" id="2_q5u70"]
 [ext_resource type="PackedScene" uid="uid://df7c5n4734pwa" path="res://src/brewing_area/brewing_slot.tscn" id="3_4xtud"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80nbo"]
-content_margin_left = 8.0
-content_margin_top = 4.0
-content_margin_right = 8.0
-content_margin_bottom = 4.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
+[ext_resource type="PackedScene" uid="uid://c4todsa5032e2" path="res://src/items/item_slot.tscn" id="6_afl66"]
 
 [node name="BackCounterView" type="Control" unique_id=508842634]
 layout_mode = 3
@@ -58,96 +47,99 @@ layout_mode = 2
 
 [node name="MugSection" parent="ScreenLayout/VBoxContainer/BoxContainer" parent_id_path=PackedInt32Array(1515221928, 92853428) index="1" unique_id=505553785 instance=ExtResource("2_q5u70")]
 layout_mode = 2
-size_flags_stretch_ratio = 1.06
+size_flags_horizontal = 1
 
 [node name="Heading" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer" parent_id_path=PackedInt32Array(505553785, 121182546) index="0" unique_id=1990267864]
 text = "Inventory"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer" parent_id_path=PackedInt32Array(505553785, 121182546) index="1" unique_id=1130033473]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="InventoryItems" type="GridContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/ScrollContainer" unique_id=636935330]
+[node name="InventoryItems" type="GridContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer" parent_id_path=PackedInt32Array(505553785, 121182546) index="1" unique_id=636935330]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 6
 columns = 5
+
+[node name="ItemSlot" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=62184073 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot2" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1148655868 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot3" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1375590550 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot4" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=616345342 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot5" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=2103234997 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot6" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1248009720 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot7" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=537523760 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot8" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=456602648 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot9" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=417765007 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot10" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=306318872 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot11" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1069601426 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot12" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=563200322 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot13" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1524022597 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot14" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=757990107 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot15" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1588510057 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot16" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=562196605 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot17" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1994575990 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot18" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1608063068 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot19" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1419241079 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot20" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=534907859 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot21" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=453324977 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot22" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1457325685 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot23" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=171598071 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot24" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1938992498 instance=ExtResource("6_afl66")]
+layout_mode = 2
+
+[node name="ItemSlot25" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1243912009 instance=ExtResource("6_afl66")]
+layout_mode = 2
 
 [node name="VisitorAreaButton" type="Button" parent="ScreenLayout/VBoxContainer" parent_id_path=PackedInt32Array(1515221928, 2098851573) index="1" unique_id=1214072987]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Move to Visitors"
 
-[node name="BoxContainer" type="BoxContainer" parent="." unique_id=295410594]
-visible = false
-layout_mode = 0
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 420.0
-offset_bottom = 201.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 16
-vertical = true
-
-[node name="PanelContainer" type="PanelContainer" parent="BoxContainer" unique_id=2000607133]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_80nbo")
-
-[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/PanelContainer" unique_id=261576634]
-layout_mode = 2
-vertical = true
-
-[node name="Heading" type="Label" parent="BoxContainer/PanelContainer/BoxContainer" unique_id=455469788]
-layout_mode = 2
-theme_override_font_sizes/font_size = 36
-text = "Inventory"
-
-[node name="InventoryItemListContainer" type="FlowContainer" parent="BoxContainer/PanelContainer/BoxContainer" unique_id=575365471]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="BoxContainer" type="BoxContainer" parent="BoxContainer" unique_id=607539316]
-layout_mode = 2
-vertical = true
-
-[node name="PanelContainer" type="PanelContainer" parent="BoxContainer/BoxContainer" unique_id=1262297764]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_80nbo")
-
-[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/BoxContainer/PanelContainer" unique_id=1756300431]
-layout_mode = 2
-vertical = true
-
-[node name="Heading" type="Label" parent="BoxContainer/BoxContainer/PanelContainer/BoxContainer" unique_id=647344125]
-layout_mode = 2
-theme_override_font_sizes/font_size = 36
-text = "Coffee Maker"
-
-[node name="CoffeeMachineState" type="Label" parent="BoxContainer/BoxContainer/PanelContainer/BoxContainer" unique_id=1318609250]
-unique_name_in_owner = true
-layout_mode = 2
-text = "CoffeeMachineState"
-
-[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/BoxContainer" unique_id=1914228298]
-layout_mode = 2
-
-[node name="AddWaterButton" type="Button" parent="BoxContainer/BoxContainer/BoxContainer" unique_id=997430281]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Add Water"
-
-[node name="MakeCoffeeButton" type="Button" parent="BoxContainer/BoxContainer/BoxContainer" unique_id=31076182]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Make Coffee"
-
-[node name="FlowContainer" type="FlowContainer" parent="BoxContainer" unique_id=1602798151]
-layout_mode = 2
-
 [connection signal="pressed" from="ScreenLayout/VBoxContainer/VisitorAreaButton" to="." method="_on_front_counter_button_pressed"]
-[connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/AddWaterButton" to="." method="_on_add_water_button_pressed"]
-[connection signal="pressed" from="BoxContainer/BoxContainer/BoxContainer/MakeCoffeeButton" to="." method="_on_make_coffee_button_pressed"]
 
 [editable path="ScreenLayout"]
 [editable path="ScreenLayout/VBoxContainer/BoxContainer/BrewingSection"]

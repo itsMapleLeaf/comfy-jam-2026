@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://df7c5n4734pwa"]
 
 [ext_resource type="Script" uid="uid://c8mfaljnhec1b" path="res://src/brewing_area/brewing_slot.gd" id="1_3585x"]
-[ext_resource type="PackedScene" uid="uid://c4todsa5032e2" path="res://src/ui/item_slot.tscn" id="2_rbadk"]
+[ext_resource type="PackedScene" uid="uid://c4todsa5032e2" path="res://src/items/item_slot.tscn" id="2_rbadk"]
 
 [node name="BrewingSlot" type="BoxContainer" unique_id=669412489]
 size_flags_horizontal = 3

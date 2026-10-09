@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemSpec" format=3 uid="uid://bkoq0nh8gijod"]
 
-[ext_resource type="Script" uid="uid://xy58n7nsyh57" path="res://src/item_spec.gd" id="1_goo42"]
+[ext_resource type="Script" uid="uid://xy58n7nsyh57" path="res://src/items/item_spec.gd" id="1_goo42"]
 [ext_resource type="Texture2D" uid="uid://djpqgrdxfeaeh" path="res://assets/hot_coffee_03.png" id="2_jnufb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_koeq0"]
