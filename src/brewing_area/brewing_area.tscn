@@ -24,28 +24,7 @@ metadata/_custom_type_script = "uid://cm1xfuw52sbu6"
 [node name="ScreenLayout" parent="." unique_id=1515221928 instance=ExtResource("2_n6olg")]
 layout_mode = 1
 
-[node name="BrewingSection" parent="ScreenLayout/VBoxContainer/BoxContainer" parent_id_path=PackedInt32Array(1515221928, 92853428) index="0" unique_id=579084514 instance=ExtResource("2_q5u70")]
-layout_mode = 2
-size_flags_stretch_ratio = 2.0
-
-[node name="Heading" parent="ScreenLayout/VBoxContainer/BoxContainer/BrewingSection/BoxContainer" parent_id_path=PackedInt32Array(579084514, 121182546) index="0" unique_id=1990267864]
-text = "Brewing"
-
-[node name="BrewingSlots" type="BoxContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/BrewingSection/BoxContainer" parent_id_path=PackedInt32Array(579084514, 121182546) index="1" unique_id=1739436510]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="BrewingSlot1" parent="ScreenLayout/VBoxContainer/BoxContainer/BrewingSection/BoxContainer/BrewingSlots" unique_id=669412489 instance=ExtResource("3_4xtud")]
-layout_mode = 2
-
-[node name="BrewingSlot2" parent="ScreenLayout/VBoxContainer/BoxContainer/BrewingSection/BoxContainer/BrewingSlots" unique_id=871861381 instance=ExtResource("3_4xtud")]
-layout_mode = 2
-
-[node name="BrewingSlot3" parent="ScreenLayout/VBoxContainer/BoxContainer/BrewingSection/BoxContainer/BrewingSlots" unique_id=1056216604 instance=ExtResource("3_4xtud")]
-layout_mode = 2
-
-[node name="MugSection" parent="ScreenLayout/VBoxContainer/BoxContainer" parent_id_path=PackedInt32Array(1515221928, 92853428) index="1" unique_id=505553785 instance=ExtResource("2_q5u70")]
+[node name="MugSection" parent="ScreenLayout/VBoxContainer/BoxContainer" parent_id_path=PackedInt32Array(1515221928, 92853428) index="0" unique_id=505553785 instance=ExtResource("2_q5u70")]
 layout_mode = 2
 size_flags_horizontal = 1
 
@@ -134,6 +113,27 @@ layout_mode = 2
 [node name="ItemSlot25" parent="ScreenLayout/VBoxContainer/BoxContainer/MugSection/BoxContainer/InventoryItems" unique_id=1243912009 instance=ExtResource("6_afl66")]
 layout_mode = 2
 
+[node name="BrewingSection" parent="ScreenLayout/VBoxContainer/BoxContainer" parent_id_path=PackedInt32Array(1515221928, 92853428) index="1" unique_id=579084514 instance=ExtResource("2_q5u70")]
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+
+[node name="Heading" parent="ScreenLayout/VBoxContainer/BoxContainer/BrewingSection/BoxContainer" parent_id_path=PackedInt32Array(579084514, 121182546) index="0" unique_id=1990267864]
+text = "Brewing"
+
+[node name="BrewingSlots" type="BoxContainer" parent="ScreenLayout/VBoxContainer/BoxContainer/BrewingSection/BoxContainer" parent_id_path=PackedInt32Array(579084514, 121182546) index="1" unique_id=1739436510]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BrewingSlot1" parent="ScreenLayout/VBoxContainer/BoxContainer/BrewingSection/BoxContainer/BrewingSlots" unique_id=669412489 instance=ExtResource("3_4xtud")]
+layout_mode = 2
+
+[node name="BrewingSlot2" parent="ScreenLayout/VBoxContainer/BoxContainer/BrewingSection/BoxContainer/BrewingSlots" unique_id=871861381 instance=ExtResource("3_4xtud")]
+layout_mode = 2
+
+[node name="BrewingSlot3" parent="ScreenLayout/VBoxContainer/BoxContainer/BrewingSection/BoxContainer/BrewingSlots" unique_id=1056216604 instance=ExtResource("3_4xtud")]
+layout_mode = 2
+
 [node name="VisitorAreaButton" type="Button" parent="ScreenLayout/VBoxContainer" parent_id_path=PackedInt32Array(1515221928, 2098851573) index="1" unique_id=1214072987]
 unique_name_in_owner = true
 layout_mode = 2
@@ -142,5 +142,5 @@ text = "Move to Visitors"
 [connection signal="pressed" from="ScreenLayout/VBoxContainer/VisitorAreaButton" to="." method="_on_front_counter_button_pressed"]
 
 [editable path="ScreenLayout"]
-[editable path="ScreenLayout/VBoxContainer/BoxContainer/BrewingSection"]
 [editable path="ScreenLayout/VBoxContainer/BoxContainer/MugSection"]
+[editable path="ScreenLayout/VBoxContainer/BoxContainer/BrewingSection"]
