@@ -17,7 +17,7 @@ func refresh() -> void:
 	sprite.refresh()
 
 
-func _default_accepts(_item: ItemState) -> bool:
+func _default_accepts(_item: ItemInstance) -> bool:
 	return true
 
 
@@ -29,11 +29,11 @@ func get_item_spec() -> ItemSpec:
 	return (sprite.item.spec if sprite and sprite.item else null)
 
 
-func get_item() -> ItemState:
+func get_item() -> ItemInstance:
 	return (sprite.item if sprite else null)
 
 
-func overwrite_item(item: ItemState) -> void:
+func overwrite_item(item: ItemInstance) -> void:
 	sprite.item = item
 
 
@@ -52,7 +52,7 @@ func decrement_item_count() -> void:
 		sprite.item = null
 
 
-func set_item_if_empty_and_accepted(item: ItemState) -> bool:
+func set_item_if_empty_and_accepted(item: ItemInstance) -> bool:
 	var accepted: bool = accepts.call(item)
 	if accepted:
 		sprite.item = item

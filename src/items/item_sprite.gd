@@ -2,7 +2,7 @@
 class_name ItemSprite
 extends PanelContainer
 
-@export var item: ItemState = null:
+@export var item: ItemInstance = null:
 	set(new_item):
 		item = new_item
 		refresh()

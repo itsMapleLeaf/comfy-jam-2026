@@ -1,4 +1,4 @@
-class_name ItemState
+class_name ItemInstance
 extends Resource
 
 var id := randi()

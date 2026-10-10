@@ -76,7 +76,7 @@ func _get_zone_slots(zone: StringName) -> Array[ItemSlot]:
 	)
 
 
-func _get_first_accepting_slot(slots: Array[ItemSlot], item: ItemState) -> ItemSlot:
+func _get_first_accepting_slot(slots: Array[ItemSlot], item: ItemInstance) -> ItemSlot:
 	for slot in slots:
 		if not slot.has_item() and slot.accepts.call(item):
 			return slot

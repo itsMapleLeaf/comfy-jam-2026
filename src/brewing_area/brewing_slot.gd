@@ -1,9 +1,9 @@
 class_name BrewingSlot
 extends BoxContainer
 
-signal brewed(drink: ItemState)
+# signal brewed(drink: ItemInstance)
 
-@export var brew_duration := 3.0
+@export var brew_duration := 0.5
 
 var remaining_brew_time := 0.0
 var is_brewing: bool:
@@ -18,11 +18,11 @@ var is_brewing: bool:
 func _ready() -> void:
 	brew_button.pressed.connect(_on_brew_button_pressed)
 
-	ingredient_slot.accepts = func(item: ItemState) -> bool:
+	ingredient_slot.accepts = func(item: ItemInstance) -> bool:
 		return item.spec is IngredientSpec
 
-	mug_slot.accepts = func(item: ItemState) -> bool:
-		return item.spec.type == ItemSpec.ItemType.MUG
+	mug_slot.accepts = func(item: ItemInstance) -> bool:
+		return item is MugInstance
 
 	refresh()
 
@@ -40,11 +40,10 @@ func _start_brew() -> void:
 
 
 func _complete_brew() -> void:
-	var drink := ItemState.new()
-	drink.spec = (ingredient_slot.get_item_spec() as IngredientSpec).brews
+	var mug: MugInstance = mug_slot.get_item()
+	mug.spec = (ingredient_slot.get_item_spec() as IngredientSpec).brews
 
 	ingredient_slot.decrement_item_count()
-	mug_slot.overwrite_item(drink)
 
 	refresh()
 
@@ -79,14 +78,8 @@ func register_item_slots(context: ItemSlotContext) -> void:
 	context.register(mug_slot)
 
 
-func apply_mug_effects(mug_effects: Dictionary[int, MugEffect]) -> void:
-	var mug_item := mug_slot.get_item()
-	if not mug_item:
-		return
-
-	var effect: MugEffect = mug_effects.get(mug_item.id)
-	if not effect:
-		return
-
-	effect.apply(mug_item)
-	mug_slot.refresh()
+func apply_mug_effects() -> void:
+	var mug_item := mug_slot.get_item() as MugInstance
+	if mug_item:
+		mug_item.effect.apply(mug_item)
+		mug_slot.refresh()

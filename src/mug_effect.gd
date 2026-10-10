@@ -2,7 +2,7 @@
 class_name MugEffect
 
 
-@abstract func apply(item: ItemState) -> void
+@abstract func apply(item: ItemInstance) -> void
 
 
 class DarkenRoast extends MugEffect:
@@ -13,7 +13,7 @@ class DarkenRoast extends MugEffect:
 	]
 
 
-	func apply(item: ItemState) -> void:
+	func apply(item: ItemInstance) -> void:
 		var current_roast_index := ROAST_ORDER.find(item.spec)
 		if current_roast_index == -1:
 			push_warning("Not a valid drink: %s" % item.spec.get_class())
