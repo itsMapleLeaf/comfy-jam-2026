@@ -1,16 +1,11 @@
 [gd_resource type="Resource" script_class="ItemSpec" format=3 uid="uid://cxr8kvxw7x084"]
 
 [ext_resource type="Script" uid="uid://xy58n7nsyh57" path="res://src/items/item_spec.gd" id="1_cdk0l"]
-[ext_resource type="Texture2D" uid="uid://djpqgrdxfeaeh" path="res://assets/hot_coffee_03.png" id="2_jldq5"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cdk0l"]
-resource_local_to_scene = true
-atlas = ExtResource("2_jldq5")
-region = Rect2(0, 48, 16, 16)
+[ext_resource type="Texture2D" uid="uid://bbg410pjlrcqg" path="res://assets/atlases/coffee_dark_roast.tres" id="2_cdk0l"]
 
 [resource]
 script = ExtResource("1_cdk0l")
 name = "Dark Roast Coffee"
 type = 2
-texture = SubResource("AtlasTexture_cdk0l")
+texture = ExtResource("2_cdk0l")
 metadata/_custom_type_script = "uid://xy58n7nsyh57"

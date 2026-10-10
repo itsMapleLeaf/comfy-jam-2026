@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://b7uaw0ahbhoko"]
+
+[ext_resource type="Texture2D" uid="uid://djpqgrdxfeaeh" path="res://assets/hot_coffee_03.png" id="1_sd6sv"]
+
+[resource]
+resource_local_to_scene = true
+atlas = ExtResource("1_sd6sv")
+region = Rect2(16, 48, 16, 16)
